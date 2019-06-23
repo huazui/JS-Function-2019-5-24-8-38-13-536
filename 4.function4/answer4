@@ -1,0 +1,5 @@
+function countWords(message){
+  var array=message.split(" ");
+  return array.length;
+}
+countWords('Good morning, I love JavaScript.'); 
