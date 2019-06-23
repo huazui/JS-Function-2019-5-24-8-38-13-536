@@ -1,0 +1,11 @@
+function palindrome(message){
+  var i=true;
+  t=message.length-1
+  for(var k=0;k<message.length;k++)
+  if(!(message[t-k]==message[k]))
+     i=false;
+  return i;
+  
+}
+palindrome('hello'); 
+palindrome('abcba');
