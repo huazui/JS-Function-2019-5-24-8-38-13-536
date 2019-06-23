@@ -1,0 +1,8 @@
+function reverseString(message){
+var str=[];
+var t=message.length-1;
+ for(var i=t;i>=0;i--)
+ str[t-i]=message[i];
+  return str.join("");
+}
+reverseString('hello'); // should return 'olleh'
