@@ -3,41 +3,44 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
     <title>Bing Search</title>
-    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css" />
-    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
-    <script type="text/javascript" src="../../ext-all.js"></script>
+    <link rel="stylesheet" href="../ext-3.3.0/resources/css/ext-all.css">
+    <script type="text/javascript" src="../ext-3.3.0/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../ext-3.3.0/ext-all.js"></script>
     <script>
         Ext.onReady(function () {
             var tabs = new Ext.TabPanel({
-                activeItem: 'tab_internal',
-                style: 'margin: 30 0 0 20;',
+                activeItem: 'searchChinese',
+                style: 'margin: 30 0 0 20;position: relative; left:170px;',
                 plain: true,
                 border: false,
+            
                 items: [
                     {
                         id: 'searchChinese',
-                      
+
                         layout: 'hbox',
                         title: '国内版',
                         items: [{
                             xtype: 'field',
                             width: 460,
-                            height: 40
+                            height: 40,
+                            
                         }
-                       
+
                         ]
                     },
                     {
                         id: 'searchEnglish',
-                        
+
                         layout: 'hbox',
                         title: '国际版',
                         items: [{
                             xtype: 'field',
                             width: 460,
-                            height: 40
-                        }, 
-                       
+                            height: 40,
+                            
+                        },
+
                         ]
                     }
                 ],
@@ -52,20 +55,22 @@
                 items: [{
                     xtype: 'box',
                     height: 80,
+                    // style: 'position: relative; top:70px;',
                     autoEl: {
                         tag: 'img',
                         src: 'BingLogo.PNG'
                     }
                 },
                     tabs,
-                    {
+                {
                     xtype: 'button',
-                
+                    style: 'left: 650px;top:50px;color:white;',
+                   
                     width: 40,
                     height: 40,
-                    text :'搜索'
-                    }
-                
+                    text: '搜索'
+                }
+
 
                 ]
             });
@@ -73,7 +78,7 @@
         });
     </script>
     <style>
-        .bodyBackground {
+        .background {
             background-image: url(backPicture.jpg);
             height: 600;
             width: 100%;
@@ -83,9 +88,9 @@
 </head>
 
 <body>
-    <div class="bodyBackground">
+    <div class="background">
         <div id="myBody"></div>
-      
+
     </div>
 </body>
 
