@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
+    <title>Bing Search</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css" />
+    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../../ext-all.js"></script>
+    <script>
+        Ext.onReady(function () {
+            var tabs = new Ext.TabPanel({
+                activeItem: 'tab_internal',
+                style: 'margin: 30 0 0 20;',
+                plain: true,
+                border: false,
+                items: [
+                    {
+                        id: 'searchChinese',
+                      
+                        layout: 'hbox',
+                        title: '国内版',
+                        items: [{
+                            xtype: 'field',
+                            width: 460,
+                            height: 40
+                        }
+                       
+                        ]
+                    },
+                    {
+                        id: 'searchEnglish',
+                        
+                        layout: 'hbox',
+                        title: '国际版',
+                        items: [{
+                            xtype: 'field',
+                            width: 460,
+                            height: 40
+                        }, 
+                       
+                        ]
+                    }
+                ],
+                width: 460,
+                height: 70,
+            });
+
+            var container = new Ext.Container({
+                renderTo: 'myBody',
+                layout: 'hbox',
+                style: 'margin: 0 0 0 60;',
+                items: [{
+                    xtype: 'box',
+                    height: 80,
+                    autoEl: {
+                        tag: 'img',
+                        src: 'BingLogo.PNG'
+                    }
+                },
+                    tabs,
+                    {
+                    xtype: 'button',
+                    border: false,
+                    width: 40,
+                    height: 40,
+                    text :'搜索'
+                    }
+                
+
+                ]
+            });
+            container.render();
+        });
+    </script>
+    <style>
+        .bodyBackground {
+            background-image: url(backPicture.jpg);
+            height: 600;
+            width: 100%;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bodyBackground">
+        <div id="myBody"></div>
+      
+    </div>
+</body>
+
+</html>
